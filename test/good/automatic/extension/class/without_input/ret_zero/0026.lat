@@ -1,0 +1,70 @@
+class a1 {
+  int i;
+  string s;
+  boolean b;
+  a2 a;
+
+  void change(a2 a, int howMuch) {
+    // what can go wrong?
+    a.i = a.i + 1; // 100, 111111
+    a.s = a.s + "-->a1";
+    a.b = !a.b;
+    if(howMuch <= 0)
+      return;
+    else
+      a.change(self, howMuch - 1);
+  }
+}
+
+class a2 {
+  int i;
+  string s;
+  boolean b;
+  a1 a;
+
+  void change(a1 a, int howMuch) {
+    // what can go wrong?
+    a.i = a.i + 1;
+    a.s = a.s + "-->a2";
+    a.b = !a.b;
+    if(howMuch <= 0)
+      return;
+    else
+      a.change(self, howMuch - 1);
+  }
+}
+
+int main() {
+  a1 a1 = new a1;
+  a1.i = 100;
+  a1.s = "Init a1! ||";
+  a1.b = true;
+
+  a2 a2 = new a2;
+  a2.i = 10;
+  a2.s = "Init a2! ||";
+  a2.b = false;
+
+  a2.a = a1;
+  a1.a = a2;
+
+  a1.change(a2, 10);
+
+  printInt(a1.i);
+  printString(a1.s);
+  printBoolean(a1.b);
+
+  printInt(a2.i);
+  printString(a2.s);
+  printBoolean(a2.b);
+
+  return 0;
+}
+
+void printBoolean(boolean b) {
+  if(b) {
+    printString("true");
+  } else {
+    printString("false");
+  }
+}

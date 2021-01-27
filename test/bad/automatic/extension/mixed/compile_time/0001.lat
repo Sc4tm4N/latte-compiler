@@ -1,0 +1,13 @@
+class janusz {
+  int barbara;
+  int grzegorz;
+}
+
+class andrzej extends janusz {
+  string barbara;
+  int[] grzegorz;
+}
+
+int main() {
+  return 1;
+}

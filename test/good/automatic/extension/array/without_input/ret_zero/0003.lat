@@ -1,0 +1,18 @@
+int main() {
+    int[] a = new int[50];
+
+    int i = 0;
+    for(int b : a) {
+      a[i] = i + 1;
+      i++;
+    }
+
+    int accumulator = 0;
+    for(int b : a) {
+      accumulator = accumulator + b;
+    }
+
+    printInt(accumulator);
+
+    return 0;
+}

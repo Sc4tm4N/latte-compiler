@@ -1,0 +1,20 @@
+class C {
+	boolean fld;
+}
+
+C foo() {
+  return new C;
+}
+
+C tester() {
+	C c = foo();
+	c.fld = true;
+	return c;
+}
+
+int main() {
+  if(tester().fld) {
+      printString("OK");
+  }
+	return 0;
+}

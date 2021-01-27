@@ -1,0 +1,4 @@
+int main() {
+    "tmp" = 20;
+    return 1;
+}

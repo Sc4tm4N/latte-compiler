@@ -1,0 +1,8 @@
+// official test 32
+/* division */
+
+int main() {
+  { printInt(-42 / -1); }
+  return 0 ;
+
+}

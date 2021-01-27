@@ -1,0 +1,39 @@
+class a {
+  int i;
+  a next;
+  a previous;
+
+  a get(boolean next) {
+    if(next) {
+      return self.next;
+    } else {
+      return previous;
+    }
+  }
+}
+
+
+int main() {
+  a a = new a;
+  a.i = 0;
+  int i = 1;
+
+  while(i <= 10) {
+     a tmp = new a;
+     tmp.i = i;
+     tmp.previous = a;
+     a.next = tmp;
+     a = tmp;
+     i++;
+  }
+
+  i = 10;
+  while (i > 0) {
+    a tmp = a.get(false);
+    printInt(tmp.i);
+    a = tmp;
+    i--;
+  }
+
+  return 0;
+}

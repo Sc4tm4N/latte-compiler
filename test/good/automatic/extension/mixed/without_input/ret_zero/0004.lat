@@ -1,0 +1,75 @@
+
+class node {
+  int node;
+  node[] nodes;
+
+  int node() {
+     return node;
+  }
+
+  void set() {
+    node = 10;
+  }
+}
+
+class node2 extends node {
+  int node2;
+
+  int node() {
+    return node * node2;
+  }
+  node[] nodes() {
+    return nodes;
+  }
+  void set() {
+    node = 20;
+    node2 = 11;
+  }
+}
+
+class node2a extends node {
+  int node2a;
+
+  int node() {
+    return node * node2a;
+  }
+  void set() {
+    node = 33;
+    node2a = 45;
+  }
+}
+
+class node3 extends node2 {
+  int node3;
+
+  int node() {
+    return node * node2 * node3;
+  }
+  void set() {
+    node = 78;
+    node2 = 23;
+    node3 = 2;
+  }
+}
+
+int main() {
+  node[] node = new node [20] ;
+  node[0] = new node;
+  node[1] = new node2;
+  node[2] = new node3;
+  node[3] = new node2a;
+  node[4] = (node) new node2;
+  node[5] = (node) new node2a;
+  node[6] = (node) new node3;
+  for(node nEl : node) {
+    if(nEl != (node)null) {
+      nEl.set();
+    }
+  }
+  for(node nEl : node) {
+    if(nEl != (node)null) {
+      printInt(nEl.node());
+    }
+  }
+  return 0;
+}

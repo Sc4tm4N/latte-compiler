@@ -1,0 +1,8 @@
+// official test 20
+int main() {
+    p();
+    printInt(1);
+    return 0;
+}
+
+void p() {}

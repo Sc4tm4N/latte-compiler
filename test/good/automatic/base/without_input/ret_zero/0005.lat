@@ -1,0 +1,18 @@
+// print int variables according to int max (compared to C)
+int main() {
+  int INT_MAX = 2147483647;
+  printInt(INT_MAX + INT_MAX);
+  printInt(INT_MAX - INT_MAX);
+  printInt(INT_MAX + 2 * INT_MAX);
+  printInt(INT_MAX - 2 * INT_MAX);
+  printInt(7 * INT_MAX);
+  printInt(INT_MAX * 7);
+  printInt(INT_MAX / 7);
+  printInt(7 / INT_MAX);
+  printInt(7 % INT_MAX);
+  printInt(INT_MAX % 7);
+  printInt(INT_MAX * INT_MAX);
+  printInt(INT_MAX * INT_MAX * (INT_MAX * INT_MAX) / INT_MAX - INT_MAX * INT_MAX);
+  printInt(INT_MAX * INT_MAX * (INT_MAX * INT_MAX) / INT_MAX + INT_MAX * INT_MAX + 5);
+  return 0;
+}

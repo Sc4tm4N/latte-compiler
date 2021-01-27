@@ -1,0 +1,43 @@
+
+class node {
+  int node;
+  node[] nodes;
+
+  int node() {
+     return node;
+  }
+}
+
+class node2 extends node {
+  int node2;
+
+  int node() {
+    return node * node2;
+  }
+  node[] nodes() {
+    return nodes;
+  }
+}
+
+class node3 extends node2 {
+  int node3;
+
+  int node() {
+    return node * node2 * node3;
+  }
+}
+
+int main() {
+  node2[] node = new node2 [2] ;
+  node[0] = new node2;
+  node[1] = new node3;
+  int it = 10;
+  for(node node : node) {
+    node.node = it;
+    it = it + 5;
+  }
+  for(node node : node) {
+    printInt(node.node());
+  }
+  return 0;
+}

@@ -1,0 +1,6 @@
+int main() {
+  if ("true" == true) {
+   printString("foo");
+  }
+  return 0 ;
+}

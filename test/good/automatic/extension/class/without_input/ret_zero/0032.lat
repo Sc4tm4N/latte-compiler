@@ -1,0 +1,35 @@
+class A {
+  void printInt() {
+    printInt(10);
+  }
+}
+
+class B extends A {
+  void a() {
+    ;
+  }
+}
+
+class C extends B {
+  void a() {
+    ;
+  }
+}
+
+class D extends C {
+    void printInt() {
+        printInt(20);
+    }
+}
+
+int main(){
+    A a = new D;
+    a.printInt();
+    a = new C;
+    a.printInt();
+    a = new B;
+    a.printInt();
+    a = new A;
+    a.printInt();
+    return 0;
+}

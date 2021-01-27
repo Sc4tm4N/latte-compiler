@@ -1,0 +1,19 @@
+// freely chosen place to declare
+
+int a(int n)
+{
+  int a = 10;
+  a++;
+  while(a > 5)
+    a--;
+  int b = 20;
+  printInt(b + a);
+  int x = 2;
+  return b * 10 - a * x ;
+}
+
+int main()
+{
+  a(10);
+  return 0;
+}

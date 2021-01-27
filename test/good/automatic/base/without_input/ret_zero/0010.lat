@@ -1,0 +1,25 @@
+// boolean evaluation (compared to C)
+int main() {
+  boolean b1 = true,
+    b2 = false,
+    b3 = b1 && b2,
+    b4 = b1 || b2,
+    b5 = b3 || b4,
+    b6 = true || b3 || b4 && b5,
+    b7 = b1 && b2 || (b1 || b2);
+  if(b1)
+    printString("b1");
+  if(b2)
+    printString("b2");
+  if(b3)
+    printString("b3");
+  if(b4)
+    printString("b4");
+  if(b5)
+    printString("b5");
+  if(b6)
+    printString("b6");
+  if(b7)
+    printString("b7");
+  return 0;
+}

@@ -1,0 +1,12 @@
+class andrzej {
+  int andrzej;
+
+  void jolanta() {
+    self = new andrzej;
+  }
+}
+
+int main() {
+  andrzej janusz = new andrzej;
+  return janusz.andrzej;
+}

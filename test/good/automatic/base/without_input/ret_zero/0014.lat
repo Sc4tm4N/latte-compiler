@@ -1,0 +1,74 @@
+// increment and decrement
+int main() {
+  int i, INT_MAX = 2147483647, INT_MIN = -2147483648;
+
+  if(i == 0)
+    printString("OK");
+  else
+    printString("There should be zero!");
+
+  i++;
+  if(i == 1)
+    printString("OK");
+  else
+    printString("Incrementing 0 leads to 1.");
+
+  i--;
+  if(i == 0)
+    printString("OK");
+  else
+    printString("Decrementing 1 leads to 0.");
+
+  i--;
+  if(i == -1)
+    printString("OK");
+  else
+    printString("Decrementing 0 leads to -1.");
+
+  printString("--------");
+
+  if(INT_MAX == 2147483647)
+    printString("OK");
+  else
+    printString("Initialized declaration gone wild!");
+
+  INT_MAX++;
+  if(INT_MAX == -2147483648)
+    printString("OK");
+  else
+    printString("Incrementing MAX_INT leads to MIN_INT.");
+
+  INT_MAX++;
+  if(INT_MAX == -2147483647)
+    printString("OK");
+  else
+    printString("Incrementing MIN_INT leads to MIN_INT + 1.");
+
+  INT_MAX--;
+  if(INT_MAX == -2147483648)
+    printString("OK");
+  else
+    printString("Decrementing MIN_INT + 1 leads to MIN_INT.");
+
+  INT_MAX--;
+  if(INT_MAX == 2147483647)
+    printString("OK");
+  else
+    printString("Decrementing MIN_INT leads to MAX_INT.");
+
+  printString("--------");
+
+  INT_MIN--;
+  if(INT_MIN == 2147483647)
+    printString("OK");
+  else
+    printString("Decrementing MIN_INT leads to MAX_INT.");
+
+  INT_MIN++;
+  if(INT_MIN == -2147483648)
+    printString("OK");
+  else
+    printString("Incrementing MAX_INT leads to MIN_INT.");
+
+  return 0;
+}

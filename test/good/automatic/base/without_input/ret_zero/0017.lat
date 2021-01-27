@@ -1,0 +1,120 @@
+// return bool
+
+boolean T() {
+  return true;
+}
+
+boolean F() {
+  return false;
+}
+
+boolean TCalc() {
+  return 1 == 1;
+}
+
+boolean varT() {
+  boolean x = true;
+  return x;
+}
+
+boolean varF() {
+  boolean x = false;
+  return x;
+}
+
+boolean varTCalc() {
+  boolean x = 1 == 1;
+  return x;
+}
+
+boolean identity(boolean a) {
+  return a;
+}
+
+boolean expression(boolean a) {
+  boolean b = true;
+  return a && b || a;
+}
+
+boolean s(int accumulator) {
+  if(accumulator == 0)
+    return T();
+  else
+    return !s(accumulator - 1);
+}
+
+int main() {
+  if(T()) {
+    printString("OK");
+  } else {
+    printString("1. Should return true.");
+  }
+
+  if(!F()) {
+    printString("OK");
+  } else {
+    printString("2. Should return false.");
+  }
+
+  if(TCalc()) {
+    printString("OK");
+  } else {
+    printString("3. Should return true.");
+  }
+
+  if(varT()) {
+    printString("OK");
+  } else {
+    printString("4. Should return true.");
+  }
+
+  if(!varF()) {
+    printString("OK");
+  } else {
+    printString("5. Should return false.");
+  }
+
+  if(varTCalc()) {
+    printString("OK");
+  } else {
+    printString("6. Should return true.");
+  }
+
+  if(identity(true)) {
+    printString("OK");
+  } else {
+    printString("7. Should return true.");
+  }
+
+  if(!identity(false)) {
+    printString("OK");
+  } else {
+    printString("8. Should return false.");
+  }
+
+  if(expression(true)) {
+    printString("OK");
+  } else {
+    printString("9. Should return true.");
+  }
+
+  if(!expression(false)) {
+    printString("OK");
+  } else {
+    printString("10. Should return false.");
+  }
+
+  if(s(4)) {
+    printString("OK");
+  } else {
+    printString("11. Should return true.");
+  }
+
+  if(!s(5)) {
+    printString("OK");
+  } else {
+    printString("12. Should return false.");
+  }
+
+  return 0;
+}

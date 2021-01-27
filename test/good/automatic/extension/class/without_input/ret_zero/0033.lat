@@ -1,0 +1,21 @@
+class A {
+	int a;
+}
+
+int incr_x(A a) {
+	a.a++;
+	return a.a;
+}
+
+int main() {
+	A a = new A;
+	while (a.a < 10)
+		int a = incr_x(a);
+	if (a.a != 10) error();
+
+	while (a.a < 20) {
+		a.a = a.a + 7;
+	}
+	if (a.a != 24) error();
+	return 0;
+}

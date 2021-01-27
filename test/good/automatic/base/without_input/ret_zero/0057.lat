@@ -1,0 +1,44 @@
+// parameters override for base types
+
+void b(boolean input) {
+  input = false;
+  if(!input)
+    printString("b2 OK");
+}
+
+void i(int input) {
+  input = 33;
+  if(input == 33)
+    printString("i2 OK");
+}
+
+void s(string input) {
+  input = "kappa";
+  if(input == "kappa")
+    printString("s2 OK");
+}
+
+int main() {
+  boolean b = true;
+  if(b)
+    printString("b1 OK");
+  b(b);
+  if(b)
+    printString("b3 OK");
+
+  int i = 13;
+  if(i == 13)
+    printString("i1 OK");
+  i(i);
+  if(i == 13)
+    printString("i3 OK");
+
+  string s = "delta";
+  if(s == "delta")
+    printString("s1 OK");
+  s(s);
+  if(s == "delta")
+    printString("s3 OK");
+
+  return 0;
+}

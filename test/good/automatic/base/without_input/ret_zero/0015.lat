@@ -1,0 +1,132 @@
+// return int
+
+int minusOne() {
+  return -1;
+}
+
+int zero() {
+  return 0;
+}
+
+int one() {
+  return 1;
+}
+
+int varMinusOne() {
+  int x = -1;
+  return x;
+}
+
+int varZero() {
+  int x = 0;
+  return x;
+}
+
+int varOne() {
+  int x = 1;
+  return x;
+}
+
+int identity(int a) {
+  return a;
+}
+
+int expression(int a) {
+  int b = 20;
+  return 20 * 20 % 31 + 12 * a - b;
+}
+
+int s(int s) {
+  if(s == 1)
+    return one();
+  else
+    return 1 + s(s - 1);
+}
+
+int main() {
+  if(minusOne() == -1) {
+    printString("OK");
+  } else {
+    printString("Should return -1.");
+  }
+
+  if(zero() == 0) {
+    printString("OK");
+  } else {
+    printString("Should return 0.");
+  }
+
+  if(one() == 1) {
+    printString("OK");
+  } else {
+    printString("Should return 1.");
+  }
+
+  if(varMinusOne() == -1) {
+    printString("OK");
+  } else {
+    printString("Should return -1.");
+  }
+
+  if(varZero() == 0) {
+    printString("OK");
+  } else {
+    printString("Should return 0.");
+  }
+
+  if(varOne() == 1) {
+    printString("OK");
+  } else {
+    printString("Should return 1.");
+  }
+
+  if(identity(-1) == -1) {
+    printString("OK");
+  } else {
+    printString("Should return -1.");
+  }
+
+  if(identity(0) == 0) {
+    printString("OK");
+  } else {
+    printString("Should return 0.");
+  }
+
+  if(identity(1) == 1) {
+    printString("OK");
+  } else {
+    printString("Should return 1.");
+  }
+
+  if(expression(-1) == -4) {
+    printString("OK");
+  } else {
+    printString("Should return -4.");
+  }
+
+  if(expression(0) == 8) {
+    printString("OK");
+  } else {
+    printString("Should return 8.");
+  }
+
+  if(expression(1) == 20) {
+    printString("OK");
+  } else {
+    printString("Should return 20.");
+  }
+
+  if(expression(1) == 20) {
+    printString("OK");
+  } else {
+    printString("Should return 20.");
+  }
+
+  if(s(10) == 10) {
+    printString("OK");
+  } else {
+    printString("Should return 10.");
+  }
+
+  return 0;
+}

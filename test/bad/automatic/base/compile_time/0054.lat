@@ -1,0 +1,7 @@
+int self() {
+  return 2;
+}
+
+int main() {
+  return self();
+}

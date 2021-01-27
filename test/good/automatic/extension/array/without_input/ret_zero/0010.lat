@@ -1,0 +1,12 @@
+int main() {
+    int[] a = new int[3];
+    for(int b : a) {
+      int c = 10;
+      {
+        int b = 20;
+        c = b;
+      }
+      printInt(c);
+    }
+    return 0;
+}

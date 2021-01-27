@@ -1,0 +1,14 @@
+int main() {
+    string[] a = new string[3];
+    a[0] = "klapek";
+    a[1] = " luzno";
+    a[2] = " szura";
+    string accumulator;
+    for(string b : a) {
+      accumulator = accumulator + b;
+    }
+
+    printString(accumulator);
+
+    return 0;
+}

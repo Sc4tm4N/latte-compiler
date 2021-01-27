@@ -1,0 +1,24 @@
+class a {
+  int a;
+
+  int getMe() {
+    error();
+  }
+}
+
+class b extends a {
+
+  int getMe() {
+    return 3;
+  }
+}
+
+int b() {
+  error();
+}
+
+int main() {
+  a a = new b;
+  a.getMe();
+  return 0;
+}

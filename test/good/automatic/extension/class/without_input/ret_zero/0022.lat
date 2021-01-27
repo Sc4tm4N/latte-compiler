@@ -1,0 +1,55 @@
+class node {
+  node node;
+  int getMe;
+
+  node node() {
+     return node;
+  }
+
+  int getMe() {
+    return getMe;
+  }
+}
+
+class a {
+  int a;
+
+  int a(int a) {
+    return a + self.a;
+  }
+
+}
+
+class b extends a {
+  int b;
+
+  int b(int b) {
+    return a() * self.a(self.a + self.b + b);
+  }
+}
+
+int a() {
+  return 5;
+}
+
+int main() {
+  node node = new node;
+  node.getMe = 20;
+  node.node = node;
+  printInt(node.node().node().node().node().node().node().node().node().getMe());
+  printInt(node.node().node.node().node.node().node.node().node.node().node.getMe());
+  printInt(node.node.node().node.node().node.node().node.node().node.node().node.node().getMe());
+  printInt(node.node.node.node.node.node.node.node.node.node.node.node.getMe());
+
+  a a = new a;
+  a.a = 10;
+
+  b b = new b;
+  b.a = 14;
+  b.b = 15;
+
+  printInt(a.a(20));
+  printInt(b.b(30));
+
+  return 0;
+}

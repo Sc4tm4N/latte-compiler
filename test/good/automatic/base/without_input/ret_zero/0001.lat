@@ -1,0 +1,9 @@
+// print const (compared to C)
+int main() {
+  printInt(-2147483648);
+  printInt(-1);
+  printInt(0);
+  printInt(1);
+  printInt(2147483647);
+  return 0;
+}

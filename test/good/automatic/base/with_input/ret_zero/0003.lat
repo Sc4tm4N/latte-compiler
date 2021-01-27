@@ -1,0 +1,17 @@
+string happyface() {
+  return ":D";
+}
+
+int main() {
+  string s1 = readString(),
+    s2 = readString(),
+    s3 = readString(),
+    s4 = readString(),
+    s5 = readString(),
+    s6 = readString(),
+    s7 = readString(),
+    s8 = s1 + s2 + s3 + s4 + s5 + s6 + s7 + happyface();
+
+  printString(s8 + " " + happyface());
+  return 0 ;
+}

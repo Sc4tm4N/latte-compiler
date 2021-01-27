@@ -1,0 +1,9 @@
+class Y extends X { int a;}
+class X {int b;}
+
+void tester() {
+	(new Y[3])[1] = new Y;
+}
+int main() {
+	return 0;
+}

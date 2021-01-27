@@ -1,0 +1,17 @@
+int main() {
+    string[] a = new string[7];
+
+    int counter = 0;
+    for(string b : a) {
+      a[counter] = readString();
+      counter++;
+    }
+    string output;
+    for(string b : a) {
+      output = output + b;
+    }
+
+    printString(output);
+
+    return 0;
+}

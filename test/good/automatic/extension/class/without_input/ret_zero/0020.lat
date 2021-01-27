@@ -1,0 +1,33 @@
+/* Should all types be legitly used. */
+
+int node(node node) {
+  return node.node();
+}
+
+class node {
+  int node;
+
+  int node() {
+     return node;
+  }
+}
+
+class node2 extends node {
+  node node2;
+
+  int node() {
+    return node * node;
+  }
+}
+
+int main() {
+  node node = new node2;
+  node.node = 10;
+  node2 node2 = new node2;
+  node2.node = 12;
+  int a = node(node);
+  int b = node(node2);
+  printInt(a);
+  printInt(b);
+  return 0;
+}

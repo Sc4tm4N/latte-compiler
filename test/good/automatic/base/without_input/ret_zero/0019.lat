@@ -1,0 +1,49 @@
+// void return from nested statements
+
+void a() {
+  return;
+}
+
+void b() {
+  if(true)
+    return;
+}
+
+void c() {
+  {
+    {
+      return;
+    }
+  }
+}
+
+void d() {
+  while(true) {
+    return;
+  }
+}
+
+void a_no_ret() {
+  int a;
+}
+
+void b_no_ret() {
+  if(true)
+    int a;
+}
+
+void c_no_ret() {
+  {
+    {
+      int a;
+    }
+  }
+}
+
+
+int main() {
+  a(); b(); c(); d();
+  a_no_ret(); b_no_ret(); c_no_ret();
+
+  return 0;
+}

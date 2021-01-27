@@ -1,0 +1,17 @@
+class A extends B {
+	void foo() {
+		int y = x;
+		printInt(y);
+	}
+}
+
+class B {
+	int x;
+}
+
+int main() {
+	A a = new A;
+	a.x = 10;
+	a.foo();
+	return 0;
+}

@@ -1,0 +1,47 @@
+// declarations for base types and defaults
+int main() {
+  int i_init = 10 * 10 - 33, i_default;
+  string s_init = "kappa" + "pride", s_default;
+  boolean b_init = true && false || false || true, b_default;
+
+  if(i_init == 67) {
+    printString("OK");
+  } else {
+    printString("Int init or int comparison gone wild!");
+  }
+
+  if(s_init == "kappapride") {
+    printString("OK");
+  } else {
+    printString("String init or string comparison gone wild!");
+  }
+
+  if(b_init) {
+    printString("OK");
+  } else {
+    printString("Bool init gone wild!");
+  }
+
+  if(i_default == 0) {
+    printString("OK");
+  } else {
+    printString("There should be ZERO!");
+  }
+
+  if(s_default == "") {
+    printString("OK");
+  } else {
+    printString("There should be empty string!");
+  }
+
+  if(!b_default) {
+    printString("OK");
+  } else {
+    printString("There should be false!");
+  }
+
+  if(!b_default)
+    return 0;
+  else
+    return 1;
+}

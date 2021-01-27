@@ -1,0 +1,92 @@
+// accessibility
+
+int c1() {
+  int x = 0;
+  if(x == x)
+    return 3;
+}
+
+int c2() {
+  if(1 == 1)
+    return 3;
+}
+
+int c3() {
+  if("xD" <= "xD")
+    return 3;
+}
+
+int c4() {
+  if(true != false)
+    return 3;
+}
+
+int c5() {
+  if(true)
+    return 3;
+}
+
+int c6() {
+  error();
+}
+
+int c7() {
+  int x = 0;
+  if(x == x)
+    error();
+}
+
+int c8() {
+  if(1 == 1)
+    error();
+}
+
+int c9() {
+  if("xD" <= "xD")
+    error();
+}
+
+int c10() {
+  if(true != false)
+    error();
+}
+
+int c11() {
+  if(true)
+    error();
+}
+
+int c12() {
+  int a = c6();
+}
+
+int c13() {
+  int a;
+  a = c6();
+}
+
+int c14() {
+  while(c6() < 0) {
+    int a = 10;
+  }
+}
+
+int c15() {
+  int b = 10;
+  if(c6() >= 20) {
+    b = 20;
+  }
+}
+
+int c16() {
+  c6();
+}
+
+int c17() {
+  return c6();
+}
+
+int main() {
+  printInt(c1() * c2() * c3() * c4() * c5());
+  return 0;
+}

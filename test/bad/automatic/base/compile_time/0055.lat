@@ -1,0 +1,7 @@
+int andrzej(int self) {
+  return self;
+}
+
+int main() {
+  return andrzej(2);
+}

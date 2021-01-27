@@ -1,0 +1,54 @@
+
+class A {
+  int[] a;
+
+  void change(int i, int x) {
+    a[i] = x;
+  }
+
+  int get(int i) {
+    return a[i];
+  }
+}
+
+class B {
+  int[] a;
+
+  void change(int i, int x) {
+    a[i] = x;
+  }
+
+  int get(int i) {
+    return a[i];
+  }
+}
+
+int main() {
+  int[] a = new int[20];
+  a[0]=0;a[1]=1;a[2]=2;a[3]=3;
+  A ac = new A;
+  ac.a = a;
+  B bc = new B;
+  bc.a = a;
+
+  printInt(ac.a[0]);
+  printInt(ac.a[1]);
+  printInt(ac.a[2]);
+  printInt(ac.a[3]);
+  printInt(bc.a[0]);
+  printInt(bc.a[1]);
+  printInt(bc.a[2]);
+  printInt(bc.a[3]);
+
+  ac.change(10, 12);
+  bc.change(15, 18);
+
+  printInt(ac.a[10]);
+  printInt(ac.a[15]);
+  printInt(bc.a[10]);
+  printInt(bc.a[15]);
+  printInt(a[10]);
+  printInt(a[15]);
+
+  return 0;
+}

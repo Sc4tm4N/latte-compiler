@@ -1,0 +1,30 @@
+class a {
+  int i;
+
+  void doHast() {
+    change(self);
+  }
+
+  int getI(){
+    return self.i;
+  }
+}
+
+void change(a a) {
+  a.i = 20;
+}
+
+int main() {
+  a a = new a;
+  a.i = 10;
+
+  printInt(a.i);
+  printInt(a.getI());
+
+  a.doHast();
+
+  printInt(a.i);
+  printInt(a.getI());
+
+  return 0;
+}

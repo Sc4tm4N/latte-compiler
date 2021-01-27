@@ -1,0 +1,90 @@
+class a {
+  int x;
+  int y;
+
+  int getX() {
+    return x;
+  }
+
+  int getY() {
+    return y;
+  }
+}
+
+class b extends a {
+  int z;
+
+  int getZ() {
+    return z;
+  }
+}
+
+class c extends b {
+  int w;
+
+  int getW() {
+    return w;
+  }
+}
+
+
+int main() {
+  a a = new a;
+  a.x = 1;
+  a.y = 2;
+
+  printInt(a.getX());
+  printInt(a.getY());
+
+  b b = new b;
+  b.x = 3;
+  b.y = 4;
+  b.z = 5;
+
+  printInt(b.getX());
+  printInt(b.getY());
+  printInt(b.getZ());
+
+  a = b;
+
+  printInt(a.getX());
+  printInt(a.getY());
+
+  printInt(b.getX());
+  printInt(b.getY());
+  printInt(b.getZ());
+
+  c c = new c;
+  c.x = 6;
+  c.y = 7;
+  c.z = 8;
+  c.w = 9;
+
+  printInt(c.getX());
+  printInt(c.getY());
+  printInt(c.getZ());
+  printInt(c.getW());
+
+  b = c;
+
+  printInt(b.getX());
+  printInt(b.getY());
+  printInt(b.getZ());
+
+  printInt(c.getX());
+  printInt(c.getY());
+  printInt(c.getZ());
+  printInt(c.getW());
+
+  a = c;
+
+  printInt(a.getX());
+  printInt(a.getY());
+
+  printInt(c.getX());
+  printInt(c.getY());
+  printInt(c.getZ());
+  printInt(c.getW());
+
+  return 0;
+}

@@ -1,0 +1,10 @@
+// print int some equations (compared to C)
+int main() {
+  int eq1 = (1 * 1 - 2 * 20) % 13 + 13 / 3 * 52 + 48 * 92 % 2,
+    eq2 = eq1 * eq1 + 59 % 11;
+  int eq3 = 3 * 3 * 3 * 3 * 3 / 3 / 3 / 3;
+  printInt(eq1);
+  printInt(eq2);
+  printInt(eq3);
+  return 0;
+}

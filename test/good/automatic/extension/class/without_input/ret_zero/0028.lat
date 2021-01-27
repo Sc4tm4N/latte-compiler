@@ -1,0 +1,26 @@
+class a {
+  int i;
+
+
+  void doHast() {
+    i = 666;
+    print(self);
+  }
+
+  int getI(){
+    return self.i;
+  }
+}
+
+void print(a a) {
+  printInt(a.i);
+}
+
+int main() {
+  a a = new a;
+  a.i = 10;
+
+  a.doHast();
+
+  return 0;
+}

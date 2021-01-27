@@ -1,0 +1,61 @@
+class a {
+  int i;
+  string s;
+  boolean b;
+  editor e;
+
+  void doHast() {
+    // what can go wrong?
+    e.iWillEditYou(self);
+  }
+}
+
+class editor {
+
+  void iWillEditYou(a a) {
+    a.i = 100000;
+    a.s = "edited";
+    a.b = !a.b;
+  }
+
+  void iWillEditYouDifferently(a a) {
+    a.i = 666;
+    a.s = "wasted";
+    a.b = !a.b;
+  }
+}
+
+int main() {
+  editor editor = new editor;
+  a a = new a;
+  a.i = 5;
+  a.s = "No... mercy!";
+  a.b = true;
+  a.e = editor;
+
+  printInt(a.i);
+  printString(a.s);
+  printBoolean(a.b);
+
+  a.doHast();
+
+  printInt(a.i);
+  printString(a.s);
+  printBoolean(a.b);
+
+  a.e.iWillEditYouDifferently(a);
+
+  printInt(a.i);
+  printString(a.s);
+  printBoolean(a.b);
+
+  return 0;
+}
+
+void printBoolean(boolean b) {
+  if(b) {
+    printString("true");
+  } else {
+    printString("false");
+  }
+}

@@ -1,0 +1,8 @@
+//print string const (compared to C)
+int main() {
+  printString("");
+  printString(" !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~");
+  printString("\n");
+  printString("done");
+  return 0;
+}

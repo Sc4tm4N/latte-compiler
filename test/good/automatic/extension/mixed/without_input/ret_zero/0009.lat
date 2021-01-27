@@ -1,0 +1,13 @@
+class C {
+	int[] fld;
+}
+
+void a() {
+  C[] c = new C[1];
+  c[0] = new C;
+	c[0].fld = new int[3];
+}
+int main() {
+  a();
+	return 0;
+}

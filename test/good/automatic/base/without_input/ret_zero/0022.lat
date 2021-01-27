@@ -1,0 +1,216 @@
+// type comparison
+
+void testInt(int i1, int i2) {
+  if(i1 == i2) {
+    printString("i1 is not eqaul i2");
+  } else {
+    printString("OK");
+  }
+
+  if(i1 != i2) {
+    printString("OK");
+  } else {
+    printString("i1 is not eqaul i2");
+  }
+
+  if(i1 + i2 == 30) {
+    printString("OK");
+  } else {
+    printString("10 + 20 = 30");
+  }
+
+  if(i1 < i2) {
+    printString("OK");
+  } else {
+    printString("10 < 20");
+  }
+
+  if(i1 <= i2) {
+    printString("OK");
+  } else {
+    printString("10 <= 20");
+  }
+
+  if(i1 > i2) {
+    printString("! 10 > 20");
+  } else {
+    printString("OK");
+  }
+
+  if(i1 >= i2) {
+    printString("! 10 >= 20");
+  } else {
+    printString("OK");
+  }
+}
+
+void testBoolean(boolean b1, boolean b2) {
+  if(b1 == b2) {
+    printString("true != false");
+  } else {
+    printString("OK");
+  }
+
+  if(b1 != b2) {
+    printString("OK");
+  } else {
+    printString("true != false");
+  }
+
+  if(b1 && b2) {
+    printString("true && false = false");
+  } else {
+    printString("OK");
+  }
+
+  if(b1 || b2) {
+    printString("OK");
+  } else {
+    printString("true || false = true");
+  }
+
+  if(!b1 || !b2) {
+    printString("OK");
+  } else {
+    printString("true || false = true");
+  }
+}
+
+void testString(string s1, string s2) {
+  if(s1 == s2) {
+    printString("\"test1\" != \"test2\"");
+  } else {
+    printString("OK");
+  }
+
+  if(s1 != s2) {
+    printString("OK");
+  } else {
+    printString("\"test1\" != \"test2\"");
+  }
+
+  if(s1 + s2 == "test1test2") {
+    printString("OK");
+  } else {
+    printString("\"test1\" + \"test2\" = \"test1test2\"");
+  }
+
+  if(s1 < s2) {
+    printString("OK");
+  } else {
+    printString("\"test1\" < \"test2\"");
+  }
+
+  if(s1 <= s2) {
+    printString("OK");
+  } else {
+    printString("\"test1\" <= \"test2\"");
+  }
+
+  if(s1 > s2) {
+    printString("! \"test1\" > \"test2\"");
+  } else {
+    printString("OK");
+  }
+
+  if(s1 >= s2) {
+    printString("! \"test1\" >= \"test2\"");
+  } else {
+    printString("OK");
+  }
+
+  if("a" == "a") {
+    printString("OK");
+  } else {
+    printString("\"a\" == \"a\"");
+  }
+
+  if("a" <= "a") {
+    printString("OK");
+  } else {
+    printString("\"a\" <= \"a\"");
+  }
+
+  if("a" < "a") {
+    printString("! \"a\" < \"a\"");
+  } else {
+    printString("OK");
+  }
+
+  if("a" == "aa") {
+    printString("! \"a\" == \"aa\"");
+  } else {
+    printString("OK");
+  }
+
+  if("a" <= "aa") {
+    printString("OK");
+  } else {
+    printString("\"a\" <= \"aa\"");
+  }
+
+  if("a" < "aa") {
+    printString("OK");
+  } else {
+    printString("! \"a\" < \"aa\"");
+  }
+
+  if("a" == "b") {
+    printString("! \"a\" == \"b\"");
+  } else {
+    printString("OK");
+  }
+
+  if("a" <= "b") {
+    printString("OK");
+  } else {
+    printString("\"a\" <= \"b\"");
+  }
+
+  if("a" < "b") {
+    printString("OK");
+  } else {
+    printString("! \"a\" < \"b\"");
+  }
+
+  if("b" != "a") {
+    printString("OK");
+  } else {
+    printString("! \"b\" == \"a\"");
+  }
+
+  if("b" >= "a") {
+    printString("OK");
+  } else {
+    printString("\"b\" >= \"a\"");
+  }
+
+  if("b" > "a") {
+    printString("OK");
+  } else {
+    printString("! \"b\" > \"a\"");
+  }
+
+  if("" < "a") {
+    printString("OK");
+  } else {
+    printString("\"\" < \"a\"");
+  }
+}
+
+
+int main() {
+  int i1 = 10;
+  int i2 = 20;
+  testInt(i1, i2);
+
+  boolean b1 = true;
+  boolean b2 = false;
+  testBoolean(b1, b2);
+
+  string s1 = "test1";
+  string s2 = "test2";
+  testString(s1, s2);
+
+  return 0;
+}

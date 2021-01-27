@@ -1,0 +1,10 @@
+// accessibility
+
+int c() {
+  if("xD" <= "xD")
+    error();
+}
+
+int main() {
+  int a = c();
+}

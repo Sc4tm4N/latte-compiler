@@ -1,0 +1,22 @@
+int main() {
+  boolean[] a = new boolean[3];
+  a[0] = true;
+  a[1] = true;
+  a[2] = true;
+  boolean and = true;
+  for(boolean b : a) {
+    and = and && b;
+  }
+
+  printBoolean(and);
+
+  return 0;
+}
+
+void printBoolean(boolean b) {
+  if(b) {
+    printString("true");
+  } else {
+    printString("false");
+  }
+}

@@ -1,0 +1,10 @@
+class Y extends X { int a; }
+class X { int b; }
+
+void a() {
+	(new Y[3])[1] = (Y) null;
+}
+int main() {
+  a();
+	return 0;
+}

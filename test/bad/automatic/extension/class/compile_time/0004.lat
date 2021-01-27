@@ -1,0 +1,19 @@
+class Node {
+  int elem;
+  Node next;
+
+  void setElem (int e)  { elem = e; }
+  void setNext (Node n) { next = n; }
+
+  int  getElem () { return elem; }
+  Node getNext () { return next; }
+
+}
+
+int main () {
+  Node q = new Node;
+  q.kappa();
+  return 0;
+}
+
+     

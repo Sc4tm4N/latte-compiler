@@ -1,0 +1,126 @@
+// return string
+
+string minusOne() {
+  return "-1";
+}
+
+string zero() {
+  return "0";
+}
+
+string one() {
+  return "1";
+}
+
+string varMinusOne() {
+  string x = "-1";
+  return x;
+}
+
+string varZero() {
+  string x = "0";
+  return x;
+}
+
+string varOne() {
+  string x = "1";
+  return x;
+}
+
+string identity(string a) {
+  return a;
+}
+
+string expression(string a) {
+  string b = "20";
+  return a + " i woke up in a new gallardo " + b;
+}
+
+string s(int accumulator) {
+  if(accumulator == 0)
+    return identity("0");
+  else
+    return "0" + s(accumulator - 1);
+}
+
+int main() {
+  if(minusOne() == "-1") {
+    printString("OK");
+  } else {
+    printString("Should return \"-1\".");
+  }
+
+  if(zero() == "0") {
+    printString("OK");
+  } else {
+    printString("Should return \"0\".");
+  }
+
+  if(one() == "1") {
+    printString("OK");
+  } else {
+    printString("Should return \"1\".");
+  }
+
+  if(varMinusOne() == "-1") {
+    printString("OK");
+  } else {
+    printString("Should return \"-1\".");
+  }
+
+  if(varZero() == "0") {
+    printString("OK");
+  } else {
+    printString("Should return \"0\".");
+  }
+
+  if(varOne() == "1") {
+    printString("OK");
+  } else {
+    printString("Should return \"1\".");
+  }
+
+  if(identity("-1") == "-1") {
+    printString("OK");
+  } else {
+    printString("Should return \"-1\".");
+  }
+
+  if(identity("0") == "0") {
+    printString("OK");
+  } else {
+    printString("Should return \"0\".");
+  }
+
+  if(identity("1") == "1") {
+    printString("OK");
+  } else {
+    printString("Should return \"1\".");
+  }
+
+  if(expression("-1") == "-1 i woke up in a new gallardo 20") {
+    printString("OK");
+  } else {
+    printString("Should return \"-1 i woke up in a new gallardo 20\".");
+  }
+
+  if(expression("0") == "0 i woke up in a new gallardo 20") {
+    printString("OK");
+  } else {
+    printString("Should return \"0 i woke up in a new gallardo 20\".");
+  }
+
+  if(expression("1") == "1 i woke up in a new gallardo 20") {
+    printString("OK");
+  } else {
+    printString("Should return \"1 i woke up in a new gallardo 20\".");
+  }
+
+  if(s(5) == "000000") {
+    printString("OK");
+  } else {
+    printString("Should return \"000000\".");
+  }
+
+  return 0;
+}

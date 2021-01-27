@@ -1,0 +1,16 @@
+// print int variables according to int max and int min (compared to C)
+int main() {
+  int INT_MIN = -2147483648;
+  int INT_MAX = 2147483647;
+  printInt(INT_MIN + INT_MAX);
+  printInt(INT_MIN - INT_MAX);
+  printInt(INT_MIN * INT_MAX);
+  printInt(INT_MIN / INT_MAX);
+  printInt(INT_MIN % INT_MAX);
+  printInt(INT_MAX + INT_MIN);
+  printInt(INT_MAX - INT_MIN);
+  printInt(INT_MAX * INT_MIN);
+  printInt(INT_MAX / INT_MIN);
+  printInt(INT_MAX % INT_MIN);
+  return 0;
+}

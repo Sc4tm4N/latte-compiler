@@ -1,0 +1,9 @@
+int main() {
+    int[] a = new int[20];
+    for(int b : a) {
+      {
+        string b = "20";
+      }
+    }
+    return 0;
+}

@@ -1,0 +1,9 @@
+int main() {
+  string[] sa = new string[5];
+
+  for(string sc : sa) {
+    printString(sc);
+  }
+
+  return 0;
+}

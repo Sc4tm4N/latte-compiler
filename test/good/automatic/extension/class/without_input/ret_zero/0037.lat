@@ -1,0 +1,33 @@
+class C {
+	int a;
+	string s;
+	boolean b;
+
+	void test() {
+	  a++;
+	  s = s + "n";
+	  b = !b;
+	}
+
+	void test2(string a, int b,boolean s) {
+	  b++;
+	  s = !s;
+	  a = a + "b";
+	}
+}
+
+
+int main() {
+  C a = new C;
+  a.s = "kappa";
+
+  a.test();
+  a.a++;
+  printInt(a.a);
+
+  a.test2(a.s, a.a, a.b);
+  a.a++;
+  printInt(a.a);
+
+	return 0;
+}

@@ -1,0 +1,6 @@
+/* Should evaluate if clause. */
+
+int main() {
+  if(0 < 10 - 3)
+    return 0 ;
+}

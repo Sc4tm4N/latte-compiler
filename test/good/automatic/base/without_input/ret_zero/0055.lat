@@ -1,0 +1,43 @@
+// mutual recursion
+
+int a(int n)
+{
+  if (n < 0)
+    return 0;
+  else
+    if (n == 0)
+      return 1;
+    else
+      return (n - a(n - 1));
+}
+
+int b(int n)
+{
+  if (n < 0)
+    return 0;
+  else
+    if (n == 0)
+      return 0;
+    else
+      return (n - b(n - 1));
+}
+
+int main()
+{
+  int i;
+
+  printString("a:");
+  i = 0;
+  while (i < 20) {
+    printInt(a(i));
+    i++;
+  }
+
+  printString("b:");
+  i = 0;
+  while (i < 20) {
+    printInt(b(i));
+    i++;
+  }
+  return 0;
+}

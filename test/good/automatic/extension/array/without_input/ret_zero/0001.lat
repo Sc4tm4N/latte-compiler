@@ -1,0 +1,15 @@
+int main() {
+    int[] a = new int[3];
+
+    for(int b : a) {
+      printInt(b);
+      b = 10;
+      printInt(b);
+    }
+
+    for(int b : a) {
+      printInt(b);
+    }
+
+    return 0;
+}

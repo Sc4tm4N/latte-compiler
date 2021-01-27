@@ -1,0 +1,15 @@
+class janusz extends andrzej {
+  int barbara;
+}
+
+class jaroslaw extends janusz {
+  int grzegorz;
+}
+
+class andrzej extends jaroslaw {
+  int krzysztof;
+}
+
+int main() {
+  return 1;
+}

@@ -1,0 +1,4 @@
+int main() {
+    boolean a = 1 < 99999999999999999;
+    return 0;
+}

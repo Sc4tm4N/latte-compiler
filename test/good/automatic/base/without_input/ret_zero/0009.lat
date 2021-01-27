@@ -1,0 +1,9 @@
+// print string some equations (compared to C)
+int main() {
+  string s1 = "FoRtNit3 " + "to" + " fcale nie ZacnaGier" + "ka" + "!11!",
+    s2 = s1 + "\n - ZGADZAM SIE W 1)0!!!!1 procentach!";
+  printString(s1);
+  printString(s2);
+  printString("a" + "b" + "c" + "d" + "\"" + "f" + "\"");
+  return 0;
+}

@@ -1,0 +1,40 @@
+// ifs
+
+int main() {
+  boolean T = true, F = false;
+
+  if(T) {
+    printString("OK");
+  } else {
+    printString("Should get into first clause for true.");
+  }
+
+  if(!T) {
+    printString("Should get into first clause for true.");
+  } else {
+    printString("OK");
+  }
+
+  if(!F) {
+    printString("OK");
+  } else {
+    printString("Should get into first clause for true.");
+  }
+
+  if(F) {
+    printString("Should get into first clause for true.");
+  } else {
+    printString("OK");
+  }
+
+  if(T)
+    if(!F)
+      if(T && !F) {
+        if(false || false || false || T)
+          printString("OK");
+        else
+          printString("Nested ifs do not work :(");
+      }
+
+  return 0;
+}

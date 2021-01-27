@@ -1,0 +1,15 @@
+class janusz {
+  int barbara() {
+    return 5;
+  }
+}
+
+class andrzej extends janusz {
+  string barbara() {
+    return "grzegorz";
+  }
+}
+
+int main() {
+  return 1;
+}

@@ -1,0 +1,25 @@
+int main() {
+  boolean[] a = new boolean[3];
+
+  int i = 0;
+  for(boolean b : a) {
+    printBoolean(b);
+    a[i] = true;
+    i++;
+    printBoolean(b);
+  }
+
+  for(boolean b : a) {
+    printBoolean(b);
+  }
+
+  return 0;
+}
+
+void printBoolean(boolean b) {
+  if(b) {
+    printString("true");
+  } else {
+    printString("false");
+  }
+}

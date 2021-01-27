@@ -1,0 +1,39 @@
+class Node {
+  int a;
+
+  void printMe() {
+    printInt(a);
+  }
+
+  void selfPrintMe() {
+    printInt(self.a);
+  }
+}
+
+int c(Node node) {
+  int previous = node.a;
+  node.a = 150;
+  return previous;
+}
+
+int main() {
+  Node node = new Node;
+  node.printMe();
+  node.a = 10;
+  node.printMe();
+  node.a++;
+  node.printMe();
+  printInt(c(node));
+  node.printMe();
+
+  Node nnode = new Node;
+  nnode.selfPrintMe();
+  nnode.a = 10;
+  nnode.selfPrintMe();
+  nnode.a++;
+  nnode.selfPrintMe();
+  printInt(c(nnode));
+  nnode.selfPrintMe();
+
+  return 0;
+}

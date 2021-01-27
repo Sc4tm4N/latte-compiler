@@ -1,0 +1,6 @@
+
+int main() {
+  if (10 > 20 + 20/(10 - 10))
+    return 2;
+  return 0;
+}

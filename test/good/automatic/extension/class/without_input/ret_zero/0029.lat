@@ -1,0 +1,35 @@
+class a {
+  int i;
+
+
+  void a0() {
+    printInt(i);
+    self.i = 1;
+    a1();
+    printInt(i);
+  }
+
+  void a1() {
+    printInt(i);
+    self.i = 2;
+    a2();
+    printInt(i);
+  }
+
+  void a2() {
+    printInt(i);
+    self.i = 3;
+    printInt(i);
+  }
+
+}
+
+
+int main() {
+  a a = new a;
+  a.i = 10;
+
+  a.a0();
+
+  return 0;
+}

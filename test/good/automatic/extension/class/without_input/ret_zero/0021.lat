@@ -1,0 +1,45 @@
+
+class node {
+  int node;
+
+  int node() {
+     return node;
+  }
+}
+
+class node2 extends node {
+  int node2;
+
+  int node() {
+    return node * node2;
+  }
+}
+
+class node3 extends node2 {
+  int node3;
+
+  int node() {
+    return node * node2 * node3;
+  }
+}
+
+int main() {
+  node3 node = new node3;
+  node.node3 = 33;
+  node.node2 = 22;
+  node.node = 11;
+
+  printInt(node.node3);
+  printInt(((node2) node).node2);
+  printInt(((node)((node2) node)).node);
+
+  printInt(node.node());
+  printInt(((node2) node).node());
+  printInt(((node)((node2) node)).node());
+
+  printInt(node.node());
+  printInt(((node2) node).node());
+  printInt(((node)((node2) node)).node());
+
+  return 0;
+}

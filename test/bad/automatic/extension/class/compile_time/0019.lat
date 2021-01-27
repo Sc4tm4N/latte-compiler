@@ -1,0 +1,8 @@
+class class {
+  int andrzej;
+}
+
+int main() {
+  class janusz = new class;
+  return janusz.andrzej;
+}

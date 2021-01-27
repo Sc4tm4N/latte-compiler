@@ -1,0 +1,108 @@
+-- extended / adjusted: https://www.mimuw.edu.pl/~ben/Zajecia/Mrj2019/Latte/Latte.cf
+-- class extensions, for element loop, arrays --------------
+
+-- programs ------------------------------------------------
+
+entrypoints      Program ;
+
+Program.         Program ::= [TopDef] ;
+
+FnDef.	         TopDef ::= FunDef ;
+ClassDef.        TopDef ::= "class" Ident "{" [ClassBody] "}" ;
+ExtendsClassDef. TopDef ::= "class" Ident "extends" Ident "{" [ClassBody] "}" ;
+
+FunAttr.         ClassBody ::= FunDef ;
+TypAttr.         ClassBody ::= Type Ident ";" ;
+
+FunDef.          FunDef  ::= Type Ident "(" [Arg] ")" Block ;
+
+Arg. 	         Arg ::= Type Ident ;
+
+separator nonempty ClassBody "";
+separator nonempty TopDef ""   ;
+separator          Arg ","     ;
+
+-- statements ----------------------------------------------
+
+Block.     Block ::= "{" [Stmt] "}" ;
+
+Empty.     Stmt ::= ";" ;
+BStmt.     Stmt ::= Block ;
+Decl.      Stmt ::= Type [Item] ";" ;
+Ass.       Stmt ::= Expr "=" Expr  ";" ;
+Incr.      Stmt ::= Expr "++"  ";" ;
+Decr.      Stmt ::= Expr "--"  ";" ;
+Ret.       Stmt ::= "return" Expr ";" ;
+VRet.      Stmt ::= "return" ";" ;
+Cond.      Stmt ::= "if" "(" Expr ")" Stmt  ;
+CondElse.  Stmt ::= "if" "(" Expr ")" Stmt "else" Stmt  ;
+While.     Stmt ::= "while" "(" Expr ")" Stmt ;
+SExp.      Stmt ::= Expr  ";" ;
+For.       Stmt ::= "for" "(" Type Ident ":" Expr ")" Stmt ;
+
+NoInit.    Item ::= Ident ;
+Init.      Item ::= Ident "=" Expr ;
+
+separator          Stmt "" ;
+separator nonempty Item "," ;
+
+-- Types ---------------------------------------------------
+
+TInt.      Type ::= "int" ;
+TStr.      Type ::= "string" ;
+TBool.     Type ::= "boolean" ;
+TVoid.     Type ::= "void" ;
+TFun.      Type ::= Type "(" [Type] ")" ;
+TTab.      Type ::= Type "[]" ;
+TClass.    Type ::= Ident ;
+
+coercions  Type 1 ;
+
+separator  Type "," ;
+
+-- Expressions ---------------------------------------------
+
+EVar.      Expr6 ::= Ident ;
+ELitInt.   Expr6 ::= Integer ;
+ELitTrue.  Expr6 ::= "true" ;
+ELitFalse. Expr6 ::= "false" ;
+EApp.      Expr6 ::= Ident "(" [Expr] ")" ;
+EString.   Expr6 ::= String ;
+ENewArr.   Expr6 ::= "new" Type "[" Expr "]" ;
+ENewClass. Expr6 ::= "new" Type ;
+EAttrFun.  Expr6 ::= Expr6 "." Ident "(" [Expr] ")" ;
+EAttrType. Expr6 ::= Expr6 "." Ident ;
+EArrAt.    Expr6 ::= Expr6 "[" Expr "]" ;
+ENullCast. Expr6 ::= "(" Ident ")" "null" ;
+ECast.     Expr5 ::= "(" Ident ")" Expr5 ;
+Neg.       Expr5 ::= "-" Expr6 ;
+Not.       Expr5 ::= "!" Expr6 ;
+EMul.      Expr4 ::= Expr4 MulOp Expr5 ;
+EAdd.      Expr3 ::= Expr3 AddOp Expr4 ;
+ERel.      Expr2 ::= Expr2 RelOp Expr3 ;
+EAnd.      Expr1 ::= Expr2 "&&" Expr1 ;
+EOr.       Expr ::= Expr1 "||" Expr ;
+
+coercions  Expr 6 ;
+
+separator  Expr "," ;
+
+-- operators -----------------------------------------------
+
+Plus.      AddOp ::= "+" ;
+Minus.     AddOp ::= "-" ;
+Times.     MulOp ::= "*" ;
+Div.       MulOp ::= "/" ;
+Mod.       MulOp ::= "%" ;
+LTH.       RelOp ::= "<" ;
+LE.        RelOp ::= "<=" ;
+GTH.       RelOp ::= ">" ;
+GE.        RelOp ::= ">=" ;
+EQU.       RelOp ::= "==" ;
+NE.        RelOp ::= "!=" ;
+
+-- comments ------------------------------------------------
+
+comment    "#" ;
+comment    "//" ;
+comment    "/*" "*/" ;

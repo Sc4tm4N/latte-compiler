@@ -1,0 +1,24 @@
+int calculate(int x) {
+  return x + x * x;
+}
+
+class Node {
+  int a;
+
+  int calculate(int x) {
+    return a + x * x;
+  }
+
+  int checker(int g) {
+    printInt(self.calculate(g));
+    printInt(calculate(g));
+    return self.calculate(g) + calculate(g);
+  }
+}
+
+int main() {
+  Node node = new Node;
+  node.a = 100;
+  printInt(node.checker(7));
+  return 0;
+}

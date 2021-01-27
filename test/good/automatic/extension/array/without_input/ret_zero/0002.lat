@@ -1,0 +1,17 @@
+int main() {
+    int[] a = new int[3];
+
+    int i = 0;
+    for(int b : a) {
+      printInt(b);
+      a[i] = 10;
+      i++;
+      printInt(b);
+    }
+
+    for(int b : a) {
+      printInt(b);
+    }
+
+    return 0;
+}

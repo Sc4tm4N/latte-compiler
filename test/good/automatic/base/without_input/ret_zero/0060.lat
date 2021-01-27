@@ -1,0 +1,15 @@
+// lazy evaluation and
+
+boolean dontTouchThis() {
+  error();
+}
+
+int main() {
+  boolean b = false;
+  if(b && dontTouchThis()) {
+    printString("Yikes!");
+  } else {
+    printString("OK");
+  }
+  return 0;
+}

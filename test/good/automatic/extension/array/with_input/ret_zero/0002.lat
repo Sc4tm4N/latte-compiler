@@ -1,0 +1,16 @@
+int main() {
+    int[] a = new int[3];
+    int counter = 0;
+    for(int b : a) {
+      printInt(b);
+      a[counter] = readInt();
+      counter++;
+      printInt(b);
+    }
+
+    for(int b : a) {
+      printInt(b);
+    }
+
+    return 0;
+}

@@ -1,0 +1,11 @@
+// error in weird place
+
+int c() {
+  if("xD" + "kap" + "pa" <= "xD" + "kap" + "pa")
+    error();
+}
+
+int main() {
+  int a = c();
+  return 0;
+}

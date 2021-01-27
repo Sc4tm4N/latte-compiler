@@ -1,0 +1,12 @@
+// lazy evaluation or
+
+boolean dontTouchThis() {
+  error();
+}
+
+int main() {
+  boolean b = true;
+  if(b || dontTouchThis())
+    printString("OK");
+  return 0;
+}

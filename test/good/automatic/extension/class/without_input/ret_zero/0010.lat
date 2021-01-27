@@ -1,0 +1,28 @@
+class Node {
+  int a;
+
+  void printMe() {
+    printInt(a);
+  }
+
+  void setMe1(int b) {
+    self.a = b;
+  }
+
+  void setMe2(int a) {
+    a++;
+    self.a = a;
+  }
+}
+
+int main() {
+  Node node = new Node;
+  printInt(node.a);
+  node.a = 10;
+  printInt(node.a);
+  node.setMe1(100);
+  printInt(node.a);
+  node.setMe2(1000);
+  printInt(node.a);
+  return 0;
+}

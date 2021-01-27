@@ -1,0 +1,38 @@
+int main () {
+  Tester t = new Tester;
+  t.s = "";
+
+  t.accumulateI();
+  t.accumulateS();
+
+  printInt(t.i);
+  printString(t.s);
+
+  t.accumulateI();
+  t.accumulateS();
+
+  printInt(t.i);
+  printString(t.s);
+
+  t.accumulateI();
+  t.accumulateS();
+
+  printInt(t.i);
+  printString(t.s);
+
+  return 0;
+}
+
+class Tester {
+  int i;
+  string s;
+
+  void accumulateI() {
+    i = i + readInt();
+  }
+
+  void accumulateS() {
+    s = s + readString();
+  }
+
+}

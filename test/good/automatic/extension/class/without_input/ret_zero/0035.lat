@@ -1,0 +1,15 @@
+class A {
+	void foo() {
+		int y = x;
+		printInt(y + 3 * x);
+	}
+	int x;
+}
+
+
+int main() {
+	A a = new A;
+	a.x = 15;
+	a.foo();
+	return 0;
+}

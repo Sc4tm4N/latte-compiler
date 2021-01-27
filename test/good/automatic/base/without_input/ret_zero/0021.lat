@@ -1,0 +1,22 @@
+// while
+
+int main() {
+  int i = 0;
+
+  while(i < 10) {{{
+    i++;
+    if(i == 10) {
+      printString("REACHED");
+    }
+  }}}
+
+  while(true) {
+    i++;
+    if(i == 50) {
+      printString("REACHED");
+      return 0;
+    }
+  }
+
+  return 1;
+}

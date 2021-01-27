@@ -1,0 +1,63 @@
+class a {
+	int a;
+
+	int a() {
+	  a++;
+	  return a;
+	}
+
+	int aa(boolean a) {
+	  if(a) {
+	    return self.a;
+	  }
+	  return -1;
+	}
+}
+
+class b {
+  string b;
+
+  string b() {
+    return b + b;
+  }
+
+  string bb(boolean b) {
+    if(b)
+      return self.b;
+    return "nope";
+  }
+}
+
+class c {
+  boolean c;
+
+  boolean c() {
+    return c || c;
+  }
+
+  boolean cc(boolean c) {
+    if(c)
+      return self.c;
+    return false;
+  }
+}
+
+int main() {
+  a a = new a;
+  b b = new b;
+  b.b = "tak";
+  c c = new c;
+  c.c = true;
+
+  a.a();
+  printInt(a.aa(a.a == 1));
+
+  b.b();
+  printString(b.bb(a.a == 1 && b == b));
+
+  c.c();
+  if(c.cc(a.a == 1 && b == b && c == c))
+    printString("ok");
+
+	return 0;
+}

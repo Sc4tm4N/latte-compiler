@@ -1,0 +1,55 @@
+class Node {
+  string a;
+
+  void printMe() {
+    printString(a);
+  }
+
+  void setMe1(string b) {
+    self.a = self.a + a + b;
+  }
+
+  void setMe2(string a) {
+    self.a = self.a + a;
+  }
+
+  string getMe() {
+    return a;
+  }
+
+  string extendMe(string suffix) {
+    return a + suffix;
+  }
+}
+
+int main() {
+  Node node = new Node;
+  node.a = "kappa";
+  printString(node.getMe());
+  printString(node.a);
+  node.printMe();
+
+
+  node.setMe1(" kapcie");
+  printString(node.getMe());
+  printString(node.a);
+  node.printMe();
+
+  node.setMe2(" z");
+  printString(node.getMe());
+  printString(node.a);
+  node.printMe();
+
+  node.setMe2(" biedry, skrrrt!");
+  printString(node.getMe());
+  printString(node.a);
+  node.printMe();
+
+  string s = node.extendMe("SUFFIX!");
+  printString(node.extendMe(s + "x2"));
+
+  printString(node.getMe());
+  printString(node.a);
+  node.printMe();
+  return 0;
+}

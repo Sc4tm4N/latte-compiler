@@ -1,0 +1,27 @@
+class Node {
+  int a;
+  int b;
+}
+
+int main() {
+  Node node1 = new Node;
+  node1.a = 100;
+  node1.b = 200;
+  Node node2 = node1;
+  Node node3;
+  printBoolean(node1 == node2);
+  printBoolean(node1 == (Node)null);
+  printBoolean((Node)null == node2);
+  printBoolean((Node)null == (Node)null);
+  printBoolean((Node)null == node3);
+  printBoolean((Node)null == node3);
+  return 0;
+}
+
+void printBoolean(boolean res) {
+  if(res) {
+    printString("true");
+  } else {
+    printString("false");
+  }
+}

@@ -1,0 +1,78 @@
+class a {
+
+  void print() {
+    printString("i am a, my a is:");
+    printString(a());
+  }
+
+  string a() {
+    return "kappa a";
+  }
+}
+
+class b extends a {
+
+  void print() {
+    printString("i am b, my a is:");
+    printString(a());
+  }
+
+  string a() {
+    return b();
+  }
+
+  string b() {
+    return "kappa b";
+  }
+
+  int h() {
+    return 3;
+  }
+}
+
+class c extends b {
+  int a;
+
+  int x() {
+    return 2;
+  }
+
+  void print() {
+    printString("i am c, my a is:");
+    printString(a());
+  }
+
+  string a() {
+    return b() + self.c();
+  }
+
+  string c() {
+    return " huh " + c();
+  }
+}
+
+string c() {
+  return "kappa outside c";
+}
+
+int main() {
+  a a = new a;
+  a.print();
+
+  b b = new b;
+  b.print();
+
+  a ab = new b;
+  ab.print();
+
+  c c = new c;
+  c.print();
+
+  a ac = new c;
+  ac.print();
+
+  ac = new b;
+  ac.print();
+
+  return 0;
+}

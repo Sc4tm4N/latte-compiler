@@ -1,0 +1,6 @@
+/* Should evaluate if clause. */
+
+int main() {
+  if("andrzej" <= "andrzej2")
+    return 0 ;
+}

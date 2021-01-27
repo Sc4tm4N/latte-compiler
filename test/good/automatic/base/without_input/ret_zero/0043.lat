@@ -1,0 +1,6 @@
+// official test 22
+int main() {
+    int x;
+    printInt(x);
+    return 0;
+}

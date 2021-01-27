@@ -1,0 +1,15 @@
+name:                latte-compiler
+version:             0.0.0.1
+synopsis:            Latte Compiler
+description:         University of Warsaw - MIM, MRJP assignment
+author:              Sebastian Kot
+maintainer:          sk371043@students.mimuw.edu.pl
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable latc
+  main-is:             Main.hs
+  build-depends:       base >=4.8, mtl >=2.2, containers >=0.5, split >=0.2, filepath >=1.4, process >=1.6, array >=0.5
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  Other-Modules:       Frontend.Grammar.AbsLatte, Frontend.Grammar.EqLatte, Frontend.Grammar.ErrM, Frontend.Grammar.LexLatte, Frontend.Grammar.ParLatte, Frontend.Grammar.PosLatte, Frontend.Grammar.PrintLatte, Frontend.Grammar.ShowLatte, Frontend.Grammar.SkelLatte, Frontend.Grammar.TestLatte, Frontend.StaticAnalysis.Analyser, Frontend.StaticAnalysis.AnalyserError, Frontend.StaticAnalysis.AnalyserExpression, Frontend.StaticAnalysis.AnalyserExpressionAssignability, Frontend.StaticAnalysis.AnalyserExpressionBounds, Frontend.StaticAnalysis.AnalyserExpressionConstantsEvaluator, Frontend.StaticAnalysis.AnalyserExpressionEquality, Frontend.StaticAnalysis.AnalyserExpressionLValue, Frontend.StaticAnalysis.AnalyserRestrictedNames, Frontend.StaticAnalysis.Definitions, Frontend.StaticAnalysis.ErrorMessages, Frontend.Data, Utils.Common, Utils.Constants, Backend.Asm.Optimisation.CommentEliminator, Backend.Asm.Optimisation.DeadCodeEliminator, Backend.Asm.Optimisation.DoubleSuffixEliminator, Backend.Asm.Optimisation.JumpsEliminator, Backend.Asm.Optimisation.MovEliminator, Backend.Asm.Optimisation.OpMerger, Backend.Asm.Optimisation.StackOperationsEliminator, Backend.Asm.CompilerExpression, Backend.Asm.CompilerStatement, Backend.Asm.CompilerTopDefs, Backend.Asm.ConstantParts, Backend.Asm.Data, Backend.Asm.ExternalFunctionCalls, Backend.Asm.Utils, Backend.Compiler, Backend.CompilerData, Backend.Utils

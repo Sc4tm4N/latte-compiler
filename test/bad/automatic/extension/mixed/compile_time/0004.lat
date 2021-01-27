@@ -1,0 +1,12 @@
+class janusz {
+  int andrzej;
+}
+
+class zygmunt extends janusz {
+  int krystyna;
+}
+
+int main() {
+  janusz[] janusz = (janusz[]) new zygmunt [20];
+  return janusz[0].andrzej;
+}

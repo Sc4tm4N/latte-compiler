@@ -1,0 +1,16 @@
+class andrzej {
+    int a;
+}
+
+class waldemar extends andrzej {
+   int b;
+}
+
+
+int main() {
+   waldemar[][] a = new waldemar[][20];
+   for(andrzej[] b : a) {
+      printInt(b.length);
+   }
+   return 0;
+}

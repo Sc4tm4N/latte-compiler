@@ -1,0 +1,41 @@
+int[] x() {
+  return new int[3];
+}
+
+int[] y() {
+  int[] x = x();
+  x[1] = 5;
+  return x;
+}
+
+int[] z(int[] z) {
+  z[0] = 10;
+  z[1] = 20;
+  z[2] = 30;
+  return z;
+}
+
+int main() {
+  printInt(y()[1]);
+  int[] x = y();
+  printInt(x[0]);
+  printInt(x[1]);
+  printInt(x[2]);
+  int[] g = z(x);
+  printInt(g[0]);
+  printInt(g[1]);
+  printInt(g[2]);
+  printInt(x[0]);
+  printInt(x[1]);
+  printInt(x[2]);
+  g[0] = 100;
+  g[1] = 200;
+  g[2] = 300;
+  printInt(g[0]);
+  printInt(g[1]);
+  printInt(g[2]);
+  printInt(x[0]);
+  printInt(x[1]);
+  printInt(x[2]);
+  return 0;
+}

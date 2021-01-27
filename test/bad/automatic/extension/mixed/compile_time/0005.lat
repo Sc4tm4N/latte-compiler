@@ -1,0 +1,14 @@
+class andrzej {
+    int a;
+}
+
+class waldemar extends andrzej {
+   int b;
+}
+
+int main() {
+   andrzej[] a = new andrzej[10];
+   waldemar[] b = new waldemar[10];
+   a = b;
+   return 0;
+}

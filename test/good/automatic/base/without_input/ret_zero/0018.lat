@@ -1,0 +1,52 @@
+// return from nested statements
+
+int a() {
+  return 1;
+}
+
+int b() {
+  if(true)
+    return 1;
+}
+
+int c() {
+  {
+    {
+      return 1;
+    }
+  }
+}
+
+int d() {
+  while(true) {
+    return 1;
+  }
+}
+
+int main() {
+  if(a() == 1) {
+    printString("OK");
+  } else {
+    printString("a) Should return 1.");
+  }
+
+  if(b() == 1) {
+    printString("OK");
+  } else {
+    printString("b) Should return 1.");
+  }
+
+  if(c() == 1) {
+    printString("OK");
+  } else {
+    printString("c) Should return 1.");
+  }
+
+  if(d() == 1) {
+    printString("OK");
+  } else {
+    printString("d) Should return 1.");
+  }
+
+  return 0;
+}

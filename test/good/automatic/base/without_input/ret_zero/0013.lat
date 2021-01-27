@@ -1,0 +1,48 @@
+// assignments for base types and defaults
+int main() {
+  int i_default;
+  string s_default;
+  boolean b_default;
+
+  if(i_default == 0) {
+    printString("OK");
+  } else {
+    printString("There should be zero!");
+  }
+
+  if(s_default == "") {
+    printString("OK");
+  } else {
+    printString("There should be empty string!");
+  }
+
+  if(!b_default) {
+    printString("OK");
+  } else {
+    printString("There should be false!");
+  }
+
+  i_default = 10 * 10 - 33;
+  s_default = "kappa" + "pride";
+  b_default = true && false || true && true;
+
+  if(i_default == 67) {
+    printString("OK");
+  } else {
+    printString("Int assigment or comparison gone wild!");
+  }
+
+  if(s_default == "kappapride") {
+    printString("OK");
+  } else {
+    printString("String assigment or comparison gone wild!");
+  }
+
+  if(b_default) {
+    printString("OK");
+  } else {
+    printString("Bool assigment gone wild!");
+  }
+
+  return 0;
+}

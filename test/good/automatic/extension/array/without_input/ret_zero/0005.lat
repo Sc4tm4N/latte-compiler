@@ -1,0 +1,16 @@
+int main() {
+    string[] a = new string[3];
+
+    int i = 0;
+    for(string b : a) {
+      a[i] = "kappa";
+      printString(a[i]);
+      i++;
+    }
+
+    for(string b : a) {
+      printString(b);
+    }
+
+    return 0;
+}

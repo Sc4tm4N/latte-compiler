@@ -1,0 +1,4 @@
+// official test 25
+int main() {
+  printInt(2*-2); return 0;
+}

@@ -1,0 +1,8 @@
+/* Should evaluate if clause. */
+
+int main() {
+  int x = 25 * 3;
+  x++;
+  if(x > 200 || true)
+    return 0 ;
+}

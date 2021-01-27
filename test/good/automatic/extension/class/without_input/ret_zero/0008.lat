@@ -1,0 +1,22 @@
+int c(Node node) {
+   int previous = node.a;
+   node.a = 150;
+   return previous;
+}
+
+class Node {
+  Node next;
+  int a;
+}
+
+int main() {
+  Node node = new Node;
+  printInt(node.a);
+  node.a = 10;
+  printInt(node.a);
+  node.a++;
+  printInt(node.a);
+  printInt(c(node));
+  printInt(node.a);
+  return 0;
+}
